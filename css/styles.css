@@ -1,0 +1,565 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-color: #F3F5FC;
+}
+
+/*
+  Estilos del encabezado
+ */
+header {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 80px;
+  position: absolute;
+}
+
+/*
+  Caja que contiene el textarea y los botones
+ */
+main div#caja {
+  margin-top: 168px;
+  margin-left: 240px;
+  float: left;
+}
+
+/*
+  Caja que contiene los botones
+ */
+main div#caja div#textoBotones {
+  margin-top: 395px;
+}
+
+/*
+  Caja que contiene la imagen y texto de advertencia
+ */
+main div#caja div#textoBotones div#advertencia {
+  margin-bottom: 16px;
+}
+
+/*
+  Caja que contiene la imagen de advertencia
+ */
+main div#caja div#textoBotones div#advertencia div#imgAdvertencia img {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  float: left;
+}
+
+/*
+  Caja que contiene el texto de advertencia
+ */
+main div#caja div#textoBotones div#advertencia div#textoAdvertencia p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+}
+
+/*
+  Caja que contiene los botones
+ */
+button {
+  width: 330px;
+  height: 67px;
+  border-radius: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/*
+  Caja que contiene el boton que encripta
+ */
+main div#caja div#textoBotones div#botones button#encriptar {
+  margin-right: 24px;
+  background-color: #0A3871;
+  color: #FFFFFF;
+}
+
+/*
+  Caja que contiene el boton que desencripta
+ */
+ main div#caja div#textoBotones div#botones button#desencriptar {
+  background-color: #D8DFE8;
+  border: 1px solid #0A3871;
+  color: #0A3871;
+}
+
+/*
+  Cambia estilos del textarea 
+ */
+main div#caja textarea#textoArea {
+  width: 680px;
+  height: 288px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0A3871;
+  background-color: #F3F5FC;
+  border: none;
+  box-shadow: none;
+  resize: none;
+  outline: none;
+}
+
+/*
+  Cambia estilos del placeholder 
+ */
+main div#caja textarea#textoArea::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0A3871;
+}
+
+/*
+  Caja que muestra el texto encriptado
+ */
+main div#textoEncriptado {
+  width: 400px;
+  height: 944px;
+  background: #FFFFFF;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  float: right;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+/*
+  Imagen de una muñeca
+ */
+main div#textoEncriptado div#muneca img {
+  display: block;
+  width: 336px;
+  margin: 0 auto;
+  margin-top: 243px;
+}
+
+/*
+  Caja de los textos
+ */
+main div#textoEncriptado div.cajaTexto {
+  margin: 0 32px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/*
+  Caja para le primer texto
+ */
+main div#textoEncriptado div#texto1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #343A40;
+}
+
+/*
+  Caja para el segundo texto
+ */
+main div#textoEncriptado div#texto2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #495057;
+}
+
+/*
+  Caja que contiene el textarea del resultado
+ */
+main div#textoEncriptado div#resultado {
+  display: none;
+}
+
+/*
+  Cambia estilos del textarea del resultado
+ */
+main div#textoEncriptado div#resultado textarea#textoResultado {
+  width: 336px;
+  height: 781px;
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #495057;
+  border: none;
+  box-shadow: none;
+  resize: none;
+  outline: none;
+}
+
+/*
+  Estilos de la caja del boton de copiar
+ */
+main div#textoEncriptado div#resultado div#botonCopiar {
+  width: 336px;
+  margin: 0 auto;
+}
+
+/*
+  Estilos del boton copiar
+ */
+main div#textoEncriptado div#resultado div#botonCopiar button#copiar {
+  margin-top: 32px;
+  background-color: white;
+  border: 1px solid #0A3871;
+  color: #0A3871;
+}
+
+/*
+  *****************************************************
+  ************** MEDIA QUERIES - DESKTOP **************
+  *****************************************************
+ */
+
+@media (max-width: 1366px) {
+  /*
+    Cabiar estilos del textarea 
+  */
+  main div#caja textarea#textoArea {
+    width: 630px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones div#botones button {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1314px) {
+  /*
+    Cabiar estilos del textarea 
+  */
+  main div#caja textarea#textoArea {
+    width: 580px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones div#botones button {
+    width: 276px;
+  }
+}
+
+@media (max-width: 1262px) {
+  /*
+    Cabiar estilos del textarea 
+  */
+  main div#caja textarea#textoArea {
+    width: 500px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones div#botones button {
+    width: 236px;
+  }
+}
+
+@media (max-width: 1200px) {
+  /*
+    Cabiar estilos del textarea 
+  */
+  main div#caja textarea#textoArea {
+    width: 400px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones div#botones button {
+    width: 186px;
+  }
+}
+@media (max-width: 1090px) {
+
+  /*
+    Caja que muestra el texto encriptado
+  */
+  main div#textoEncriptado {
+    width: 325px;
+  }
+
+  /*
+    Imagen de una muñeca
+  */
+  main div#textoEncriptado div#muneca img {
+    width: 295px;
+  }
+
+  /*
+  Cabiar estilos del textarea del resultado
+ */
+  main div#textoEncriptado div#resultado textarea#textoResultado {
+    width: 261px;
+  }
+
+  /*
+  Estilos de la caja del boton de copiar
+ */
+  main div#textoEncriptado div#resultado div#botonCopiar {
+    width: 261px;
+  }
+
+  /*
+  Estilos del boton copiar
+ */
+  main div#textoEncriptado div#resultado div#botonCopiar button#copiar {
+    width: 261px;
+  }
+}
+
+@media (max-width: 1013px) {
+  /*
+    Caja que contiene el textarea y los botones
+  */
+  main div#caja {
+    margin-left: 150px;
+  }
+}
+
+@media (max-width: 926px) {
+  /*
+    Caja que contiene el textarea y los botones
+  */
+  main div#caja {
+    margin-left: 110px;
+  }
+}
+
+@media (max-width: 885px) {
+  /*
+    Caja que contiene el textarea y los botones
+  */
+  main div#caja {
+    margin-left: 75px;
+  }
+
+  /*
+    Cabiar estilos del textarea 
+  */
+  main div#caja textarea#textoArea {
+    width: 330px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones div#botones button {
+    width: 150px;
+  }
+
+  /*
+    Caja que muestra el texto encriptado
+  */
+  main div#textoEncriptado {
+    width: 310px;
+  }
+}
+
+/*
+  *****************************************************
+  ************** MEDIA QUERIES - TABLET **************
+  *****************************************************
+ */
+
+@media (max-width: 768px) {
+  /*
+    Estilos del encabezado
+  */
+  header {
+    margin-left: 40px;
+  }
+
+  /*
+    Caja que contiene el textarea y los botones
+  */
+  main div#caja {
+    margin-left: 40px;
+  }
+
+  /*
+    Cabiar estilos del textarea 
+  */
+  main div#caja textarea#textoArea {
+    width: 688px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones {
+    margin-top: 308px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones div#botones button {
+    width: 330px;
+  }
+
+  /*
+    Caja que contiene el boton que desencripta
+   */
+  main div#caja div#textoBotones div#botones button#desencriptar {
+    background-color: #F3F5FC
+  }
+
+  /*
+    Caja que muestra el texto encriptado
+   */
+  main div#textoEncriptado {
+    width: 688px;
+    height: 133px;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  /*
+    Imagen de una muñeca
+   */
+  main div#textoEncriptado div#muneca img {
+    display: none;
+  }
+
+  /*
+    Caja de los textos
+   */
+  main div#textoEncriptado div.cajaTexto {
+    margin-top: 0px;
+  }
+
+  /*
+    Caja para le primer texto
+   */
+  main div#textoEncriptado div#texto1 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  /*
+    Cambia estilos del textarea del resultado
+   */
+  main div#textoEncriptado div#resultado textarea#textoResultado {
+    width: 624px;
+    height: 180px;
+  }
+
+  /*
+    Estilos de la caja del boton de copiar
+   */
+  main div#textoEncriptado div#resultado div#botonCopiar {
+    width: 624px;
+  }
+
+  /*
+    Estilos del boton copiar
+   */
+  main div#textoEncriptado div#resultado div#botonCopiar button#copiar {
+    width: 624px;
+  }
+}
+
+/*
+  *****************************************************
+  ************** MEDIA QUERIES - CELULAR **************
+  *****************************************************
+ */
+@media (max-width: 375px) {
+  /*
+    Estilos del encabezado
+  */
+  header {
+    margin-left: 16px;
+    margin-top: 23.97px;
+  }
+
+  /*
+    Caja que contiene el textarea y los botones
+  */
+  main div#caja {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  /*
+    Cabiar estilos del textarea 
+    */
+  main div#caja textarea#textoArea {
+    width: 343px;
+  }
+
+  /*
+    Caja que contiene los botones
+  */
+  main div#caja div#textoBotones div#botones button {
+    width: 342px;
+  }
+
+  /*
+    Caja que contiene el boton que encripta
+   */
+  main div#caja div#textoBotones div#botones button#encriptar {
+    margin-right: 0px;
+  }
+
+  /*
+    Caja que contiene el boton que encripta
+    */
+  main div#caja div#textoBotones div#botones button#encriptar {
+    margin-bottom: 24px;
+  }
+
+  /*
+    Caja que muestra el texto encriptado
+   */
+  main div#textoEncriptado {
+    width: 327px;
+    height: 186px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  /*
+  Cambia estilos del textarea del resultado
+ */
+  main div#textoEncriptado div#resultado textarea#textoResultado {
+    width: 279px;
+    height: 432px;
+  }
+
+  /*
+    Estilos de la caja del boton de copiar
+   */
+   main div#textoEncriptado div#resultado div#botonCopiar {
+    width: 279px;
+  }
+
+  /*
+    Estilos del boton copiar
+   */
+  main div#textoEncriptado div#resultado div#botonCopiar button#copiar {
+    width: 279px;
+  }
+}

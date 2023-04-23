@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- LOGO -->
+  <header id="header">
+    <img src="img/logo.svg" alt="">
+  </header>
+
+  <!-- CONTENIDO -->
+  <main>
+    <!-- TEXTO DEL USUARIO Y BOTONES -->
+    <div id="caja">
+      <textarea id="textoArea" name="texto" placeholder="Ingrese el texto aquí"></textarea>
+
+      <div id="textoBotones">
+        <!-- MENSAJE DE ADVERTENCIA -->
+        <div id="advertencia">
+          <div id="imgAdvertencia">
+            <img src="img/warning.svg" alt="">
+          </div>
+  
+          <div id="textoAdvertencia">
+            <p for="">
+              Solo letras minúsculas y sin acentos
+            </p>
+          </div>
+        </div>
+  
+        <!-- BOTONES -->
+        <div id="botones">
+          <button id="encriptar">
+            Encriptar
+          </button>
+          
+          <button id="desencriptar">
+            Desencriptar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEXTO ENCRIPTADO -->
+    <div id="textoEncriptado">
+      <div id="muneca">
+        <img src="img/muneca.svg" alt="">
+      </div>
+
+      <!-- PRIMER MENSAJE -->
+      <div class="cajaTexto" id="texto1">
+        <p>
+          Ningún mensaje fue encontrado
+        </p>
+      </div>
+
+      <!-- SEGUNDO MENSAJE -->
+      <div class="cajaTexto" id="texto2">
+        <p>
+          Ingresa el texto que desees encriptar o desencriptar.
+        </p>
+      </div>
+
+      <!-- CAJA DE TEXTO CON LA RESPUESTA -->
+      <div id="resultado">
+        <textarea name="resultado" id="textoResultado" readonly></textarea>
+
+        <div id="botonCopiar">
+          <button id="copiar">
+            Copiar
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS -->
+  <script src="js/encrypt.js"></script>
+</body>
+
+</html>
